@@ -6,21 +6,8 @@ from io import BytesIO
 import base64
 from scipy import stats
 
-datos = {
-    'peso': [7.2, 8.5, 9.8, 6.5, 7.5, 10.1, 11, 11, 11.1, 11.2, 11.3, 11.4, 11.4, 11.7, 12, 
-             12.9, 12.9, 10.3, 9.7, 10.8, 11, 10.2, 10.5, 6.5, 6.3, 7.3, 7.5, 7.9, 8.2],
-    'altura': [50, 66, 73, 72, 81, 73, 66, 75, 70, 75, 69, 76, 76, 69, 75, 64, 55, 76, 71, 
-               64, 78, 70, 74, 72, 77, 51, 62, 60, 70],
-    'velocidad': [10.3, 10.3, 10.2, 16.4, 18.8, 19.7, 15.6, 21.2, 22.6, np.nan, 19.9, 24.2, 
-                  21, 21.4, 21.3, 22.2, np.nan, 33.8, 27.4, 25.7, 24.9, 23.1, 31.7, 36.3, 
-                  38.3, 42.6, 55.4, np.nan, 58.3],
-    'color': ['Blanco', 'Amarillo', 'Verde', 'Verde', 'Verde', 'Verde', 'Blanco', 'Amarillo', 
-              np.nan, 'Blanco', 'Amarillo', 'Blanco', 'Verde', 'Verde', 'Amarillo', 'Amarillo', 
-              'Blanco', 'Amarillo', 'Verde', 'Verde', 'Amarillo', 'Verde', 'Verde', 'Verde', 
-              'Blanco', 'Blanco', np.nan, 'Amarillo', 'Verde']
-}
+df = pd.read_csv('datos.csv')
 
-df = pd.DataFrame(datos)
 
 def calcular_estadisticas_descriptivas():
     """Calcula media, mediana, moda y otras estadísticas descriptivas"""
